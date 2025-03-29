@@ -85,7 +85,7 @@ CONFIG = {
 
 Install the required dependencies and run the script:
 
-```
+```bash
 pip install -r requirements.txt
 python Ascii_converter.py
 ```
@@ -93,3 +93,7 @@ python Ascii_converter.py
 ## License
 
 This project is licensed under the MIT License. See `LICENSE.txt` for details.
+
+## Author
+
+Created by [Pelayo Felgueroso](https://github.com/ItsMatchesMalone)
