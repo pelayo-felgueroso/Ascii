@@ -9,8 +9,8 @@ import tifffile
 # === CONFIGURATION ===
 CONFIG = {
     "input_path": "Aphelion/skull.jpg",#"Aphelion/wave.jpg",
-    "output_image_path": "Aphelion/skull_ascii.jpg",#"Aphelion/wave_ascii.jpg",
-    "output_text_path": "Aphelion/skull_ascii.txt",
+    "output_image_path": "Aphelion/skull_ascii2.jpg",#"Aphelion/wave_ascii.jpg",
+    "output_text_path": "Aphelion/skull_ascii2.txt",
     "ascii_chars": " ;i7JYGP$B&#@",#"@%#*+=-:. " " :-=+*#%@"  " .,:;i1tfLCG08@" " .oO@" " ⠀" ;i7JYGP$B8&#@"
     "scale_factor": 0.9,                  # Controls resolution: lower = bigger characters
     "font_size": None,                    # None = use default font, or set to e.g. 14 for truetype
@@ -82,7 +82,7 @@ for y in range(rows):
         px_y = int(y * aspect_correction)
         if px_y >= new_height or px_x >= new_width:
             continue
-        lum = luminance[px_y, px_x]
+        lum = int(luminance[px_y, px_x])
         char = CONFIG["ascii_chars"][lum * len(CONFIG["ascii_chars"]) // 256]
 
         # === CHOOSE CHARACTER COLOR ===
